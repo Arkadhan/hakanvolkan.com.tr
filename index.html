@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>Hakan Vollkan - Bilgisayarın Öğretmeni, Yazılımın Mühendisi</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Öğrenci Girişi</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#Login" data-toggle="tab">Giriş</a></li>
+					<li><a href="#Registration" data-toggle="tab">Kayıt Ol</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Kabul Et
+									</button>
+									<a class="for-pwd" href="javascript:;">Şifremi Unuttum</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane" id="Registration">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="password" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Kaydet &amp; Devam ET
+									</button>
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										İptal</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.png" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Hakkımızda</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Eğitimler</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="#">Robotik Kodlama </a>
+								<a class="dropdown-item" href="#">Siber Güvenlik Analistliği </a>
+								<a class="dropdown-item" href="#">Yazılım Geliştirme </a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="#">Blog </a>
+								
+							</div>
+						</li>
+						
+						
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Şimdi Kayıt Ol </span></a></li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div id="home" class="first-section" style="background-image:url('images/slider-01.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-right">
+									<div class="big-tagline">
+										<h2><strong>Robotik Kodlama</strong> Eğitimi</h2>
+										<p class="lead">Robotlar ile yaşamaya hazırız. Peki kendi robotumuzu kendimiz yapmaya ne dersiniz?  </p>
+											<a href="#" class="hover-btn-new"><span>İletişime Geçin</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="#" class="hover-btn-new"><span>Haydi Gel</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/slider-02.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-left">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"> <strong>Siber Güvenlik</strong></h2>
+										<p class="lead" data-animation="animated fadeInLeft"> Sanal dünyada kendini daha çok korumak ve nasıl korunacağını uygulamalı olarak görmek istermisin? </p>
+											<a href="#" class="hover-btn-new"><span>İletişime Geçin</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="#" class="hover-btn-new"><span>Haydi Gel</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>İşletim Sistemi</strong> Eğitimleri</h2>
+										<p class="lead" data-animation="animated fadeInLeft">
+											Hangi işletim sistemini kullanıyorsunuz? (CentOS, Windows, Debian, Fedora)
+											Daha iyi kullanmak istemez misin?</p>
+											<a href="#" class="hover-btn-new"><span>İletişime Geçin</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="#" class="hover-btn-new"><span>Daha Fazla Oku</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<!-- Left Control -->
+			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Önceki</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Sonraki</span>
+			</a>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>Hakkımda</h3>
+                    <p class="lead">Adım Hakan Volkan. Milli Eğitimde 13 yılı aşkın süredir Bilgisayar Sistemleri Öğretmeni olarak görev yapmaktayım. Aynı zamanda ikinci üniversite olarak da Yazılım Mühendisliğini bitirdim. Sizler daha faydalı olabilmek için bu siteyi hayata geçirmeyi düşünüyorum.</p>
+                </div>
+            </div><!-- end title -->
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h4>2018 de olduğu gibi 2019 da da öğrenmeye ve öğretmeye devam edeceğiz</h4>
+                        <h2>Okulumuza Hoş geldiniz</h2>
+                        <p>Daha iyi bir eğitmen ve daha kaliteli bir hizmet almak istemez misiniz?.</p>
+
+                        <p> Eğitim bireyde kalıcı yollu davranış değişikliğidir. Sizde unutamayacağınız izler bırakmak istiyoruz. </p>
+
+                        <a href="#" class="hover-btn-new orange"><span>Daha Fazla</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_02.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>Gelecek çok hızlı gelecek</h2>
+                        <p>Bizler geleceğimizi daha iyi bir şekilde programlayabiliriz.</p>
+
+                        <p> Gelecekte neler oloacağını önceden bilmek sizi geleceğe hazırlayan en önemli karakteristik özelliktir.</p>
+
+                        <a href="#" class="hover-btn-new orange"><span>Daha Fazla</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <section class="section lb page-section">
+		<div class="container">
+			 <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>Benim Hikayem</h3>
+                    <p class="lead">Eğitim ile okulda geçen 30 yıl. Evet 30 yıldır okuyorum ve okula gidiyorum. Bir 30 yıl daha gideceğim gibi görünüyor. Öğrenmek, öğretmek kadar güzel...</p>
+                </div>
+            </div><!-- end title -->
+			<div class="timeline">
+				<div class="timeline__wrap">
+					<div class="timeline__items">
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>2019</h2>
+								<p>Lübnan Üniversitesinin açtığı bir eğitim ile Cisco CyberOps Sertifikasını alarak Siber Güvenlik Analisti eğitimleri vermek için sabırsızlanıyorum.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>2018</h2>
+								<p>Çeşitli Atölyelerde Robotik Kodlama eğitimi veriyorum.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>2014</h2>
+								<p>İzmir ili Torbalı ilçesindeki Torbalı Endüstri Meslek Lisesine atandım. Halen bu kurumda çalışmaktayım. </p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>2010</h2>
+								<p>Cisco Netacademy ile tanıştın ve Hizmet içi eğitim ile tüm sertifikaları (CCNA seviyesinde) eğitmen eğiticisi olarak aldım.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>2009</h2>
+								<p>Kırşehir ili Çiçekdağı ilçesi Mesleki ve Teknik Eğitim Merkezine atandım. Bu kurumda 4 sene Bölüm Şefliği ve 1 sene Müdür Yardımcılığı görevlerini yaptım. Aynı sene Beceri Tabanlı Proje Yarışmasında OGS (Otomobil Güvenlik Sisemi) isimli proje ile il ikincisi olduk.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>2006</h2>
+								<p>KPSS sınav puanım ile 21 tercih ile Hakkari ili Şemdinli İlçesi Cumhuriyet İlköğretim Okulunda kadrolu olarak görevime devam ettim.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>2005</h2>
+								<p>Kastamonu ili Tosya ilçesi Fatih İlk Öğretim Okulunda Kısmi Zamanlı Geçiçi Öğretici ünvanı(!) ile öğretmenlik hayatına başladım.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>2005</h2>
+								<p>Isparta Süleyman Demirel Üniversitesi Teknik Eğitim Fakültesi Bilgisayar Sistemleri Öğretmenliğinden mezun oldum.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+    <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Görüş ve Öneriler</h3>
+                <p>Siz de bizim hakkımızda görüş ve öneri yazabilirsiniz. Feedback en önem verdğimiz husustur. </p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/testi_03.png" alt="" class="img-fluid">
+                                <h4>Funda Gül Volkan </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Harika Destek!</h3>
+                                <p class="lead">Gerçekten profesyonelce bir yaklaşım tarzları var. Yeni eğitimlerde tek tercihimsiniz.</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/testi_02.png" alt="" class="img-fluid">
+                                <h4>Giray Volkan </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Harika Servis!</h3>
+                                <p class="lead">Verilen eğitimin kalitesi gerçekten takdire şayan..</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/testi_03.png" alt="" class="img-fluid ">
+                                <h4>Mina Volkan </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Büyük Takım</h3>
+                                <p class="lead">Lab uygulamaları olsun teorik anlatımlar olsun hepsi keyifliy ve öğrenme açıcıydı. Teşekkürler </p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/testi_03.png" alt="" class="img-fluid">
+                                <h4>Mira VOLKAN </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i>Kaliteli Eğitim</h3>
+                                <p class="lead"> Verilen eğitim içerik olarak ve sunuş tarzı olarak beni doyurdu.</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        
+                        
+                          
+                        </div><!-- end testimonial -->
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div class="parallax section dbcolor">
+        <div class="container">
+            <div class="row logos">
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src=""  alt="" class="img-repsonsive"></a>
+                </div><h1>Bu Web sayfasında yazılan yazıların tamamı test amaçlı olarak yazılmıştır. <br>
+                	.............................................Site yapım aşamasındadır.........................................</h1>
+
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src=""  alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="" alt=""  class="img-repsonsive"></a>
+                </div>
+                
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Hakkımızda</h3>
+                        </div>
+                        <p> Yeni şeyler öğrenmek ve öğrendiğimizi herkese öğretmek için yola çıktık. Bir şey biliyorsan karşındaki de öğrensin, önündeki de arkandaki de öğrensin. Hepimiz öğrenerek daha güzel daha yaşanılabilir bir dünyada yaşayabiliriz.</p>   
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="https://tr.linkedin.com/in/hakan-volkan-288309143?"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://github.com/Arkadhan"><i class="fa fa-github"></i></a></li>
+								<li><a href="https://twitter.com/hakanbvolkan"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul><!-- end links -->
+						</div>						
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Bilgilendirici Linkler</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#">Ana SAyfa</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Satın Al</a></li>
+							<li><a href="#">Hakkımda </a></li>
+							<li><a href="#">İletişim</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>İletişim Detayları</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">hakanbvolkan@hotmail.com</a></li>
+                            <li><a href="#">www.hakanvolkan.com.tr</a></li>
+                            <li>Torbalı Mesleki ve Teknik Anadolu Lisesi İzmir</li>
+                            <li>+90 505 910 43 32</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">Hakan Volkan</a> Design By : <a href="https://html.design/">html design</a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>
